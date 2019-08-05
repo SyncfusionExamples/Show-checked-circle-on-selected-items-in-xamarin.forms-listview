@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:local="clr-namespace:CustomSelection"
+             x:Class="CustomSelection.MainPage">
+    <ContentPage.BindingContext>
+        <local:SelectionViewModel/>
+    </ContentPage.BindingContext>
+
+    <sync:SfListView x:Name="listView" ItemsSource="{Binding MusicInfo}"
+                     SelectionGesture="Tap"
+                     SelectionMode="Single"
+                     SelectionBackgroundColor="Transparent"
+                     IsStickyHeader="True" ItemSize="70">
+        <sync:SfListView.SelectedItemTemplate>
+            <DataTemplate x:Name="selectedItemTemplate">
+                <Grid x:Name="grid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="{Binding SongThumbnail}"
+                     HeightRequest="35"
+                     WidthRequest="35"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"/>
+
+                        <Grid Grid.Column="1"
+                    RowSpacing="1"
+                    Padding="15,0,0,0"
+                    VerticalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Label LineBreakMode="NoWrap"
+                       TextColor="#474747"
+                       Text="{Binding SongTitle}" FontSize="18" />
+                            <Grid RowSpacing="0"
+                      ColumnSpacing="0"
+                      Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label TextColor="#474747" LineBreakMode="NoWrap"
+                         Text="{Binding SongAuther}" FontSize="12" />
+                                <Label TextColor="#474747" Margin="0,0,10,0"
+                         Grid.Column="1" LineBreakMode="NoWrap" HorizontalTextAlignment="End"
+                         Text="{Binding SongSize}" FontSize="12" />
+                            </Grid>
+                        </Grid>
+
+                        <Image Grid.Column="2" x:Name="selectionImage" Margin="10,0,10,0"
+                                   HeightRequest="30" WidthRequest="30" VerticalOptions="Center" HorizontalOptions="Center"
+                                   IsVisible="True" Source="Selected.png"/>
+                    </Grid>
+                    <Frame Grid.Row="1" OutlineColor="#E4E4E4" HasShadow="True" HeightRequest="1"/>
+                </Grid>
+            </DataTemplate>
+            </sync:SfListView.SelectedItemTemplate>
+            <sync:SfListView.ItemTemplate>
+            <DataTemplate x:Name="ItemTemplate">
+                <Grid x:Name="grid" RowSpacing="0" ColumnSpacing="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="1" />
+                    </Grid.RowDefinitions>
+                    <Grid RowSpacing="0" ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="{Binding SongThumbnail}"
+                     HeightRequest="35"
+                     WidthRequest="35"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"/>
+
+                        <Grid Grid.Column="1"
+                    RowSpacing="1"
+                    Padding="15,0,0,0"
+                    VerticalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Label LineBreakMode="NoWrap"
+                       TextColor="#474747"
+                       Text="{Binding SongTitle}" FontSize="18" />
+                            <Grid RowSpacing="0"
+                      ColumnSpacing="0"
+                      Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label TextColor="#474747" LineBreakMode="NoWrap"
+                         Text="{Binding SongAuther}" FontSize="12" />
+                                <Label TextColor="#474747" Margin="0,0,10,0"
+                         Grid.Column="1" LineBreakMode="NoWrap" HorizontalTextAlignment="End"
+                         Text="{Binding SongSize}" FontSize="12" />
+                            </Grid>
+                        </Grid>
+
+                        <!--<Image Grid.Column="2" x:Name="selectionImage" Margin="10,0,10,0"
+                     HeightRequest="30" WidthRequest="30" VerticalOptions="Center" HorizontalOptions="Center"
+                     IsVisible="True"
+                     Source="NotSelected.png"/>-->
+                    </Grid>
+                    <Frame Grid.Row="1" OutlineColor="#E4E4E4" HasShadow="True" HeightRequest="1"/>
+                </Grid>
+            </DataTemplate>
+        </sync:SfListView.ItemTemplate>
+
+    </sync:SfListView>
+</ContentPage>
