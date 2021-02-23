@@ -16,54 +16,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Images\Favorites %282%29.png" />
-    <None Remove="Images\Favorites.png" />
-    <None Remove="Images\Favorites1 %282%29.png" />
-    <None Remove="Images\Favorites1.png" />
-    <None Remove="Images\InboxIcon %282%29.png" />
-    <None Remove="Images\InboxIcon.png" />
-    <None Remove="Images\Movies &amp; Music %282%29.png" />
-    <None Remove="Images\Movies &amp; Music.png" />
-    <None Remove="Images\NotSelected %282%29.png" />
-    <None Remove="Images\NotSelected.png" />
-    <None Remove="Images\Selected %282%29.png" />
-    <None Remove="Images\Selected.png" />
-    <None Remove="Images\SelectionCancel %282%29.png" />
-    <None Remove="Images\SelectionCancel.png" />
-    <None Remove="Images\SelectionEdit %282%29.png" />
-    <None Remove="Images\SelectionEdit.png" />
-    <None Remove="Images\SongThumbnail %282%29.png" />
     <None Remove="Images\SongThumbnail.png" />
-    <None Remove="Images\SortIcon %282%29.png" />
-    <None Remove="Images\SortIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Images\Favorites (2).png" />
-    <EmbeddedResource Include="Images\Favorites.png" />
-    <EmbeddedResource Include="Images\Favorites1 (2).png" />
-    <EmbeddedResource Include="Images\Favorites1.png" />
-    <EmbeddedResource Include="Images\InboxIcon (2).png" />
-    <EmbeddedResource Include="Images\InboxIcon.png" />
-    <EmbeddedResource Include="Images\Movies &amp; Music (2).png" />
-    <EmbeddedResource Include="Images\Movies &amp; Music.png" />
-    <EmbeddedResource Include="Images\NotSelected (2).png" />
-    <EmbeddedResource Include="Images\NotSelected.png" />
-    <EmbeddedResource Include="Images\Selected (2).png" />
-    <EmbeddedResource Include="Images\Selected.png" />
-    <EmbeddedResource Include="Images\SelectionCancel (2).png" />
-    <EmbeddedResource Include="Images\SelectionCancel.png" />
-    <EmbeddedResource Include="Images\SelectionEdit (2).png" />
-    <EmbeddedResource Include="Images\SelectionEdit.png" />
-    <EmbeddedResource Include="Images\SongThumbnail (2).png" />
     <EmbeddedResource Include="Images\SongThumbnail.png" />
-    <EmbeddedResource Include="Images\SortIcon (2).png" />
-    <EmbeddedResource Include="Images\SortIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.1.0.53" />
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.4.0.44" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
   </ItemGroup>
 
   <ItemGroup>

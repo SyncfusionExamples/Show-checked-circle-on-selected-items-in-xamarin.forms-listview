@@ -149,9 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Syncfusion.Xamarin.SfListView">
-      <Version>17.1.0.53</Version>
+      <Version>18.4.0.44</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -161,9 +161,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\NotSelected.png" />
+    <BundleResource Include="..\ListViewSelection.Android\Resources\drawable\NotSelected.png">
+      <Link>Resources\NotSelected.png</Link>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Selected.png" />
+    <BundleResource Include="..\ListViewSelection.Android\Resources\drawable\Selected.png">
+      <Link>Resources\Selected.png</Link>
+    </BundleResource>
   </ItemGroup>
 </Project>
